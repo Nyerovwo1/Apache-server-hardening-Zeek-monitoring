@@ -2,15 +2,14 @@
 
 #  Apache Server Hardening & Network Threat Monitoring with Zeek
 
-**Author:** Nyerovwo Obarueroro | **Role:** SOC Analyst | **Date:** 27/11/25
+**Author:** Nyerovwo Obarueroro 
+**Date:** 27/07/2524
 
 This project demonstrates a hands-on, two-phase security exercise:
 1.  **Securing an Apache Web Server:** Implementing form-based authentication to protect a custom webpage.
 2.  **Proactive Network Threat Hunting with Zeek:** Deploying a powerful NSM tool to monitor traffic and successfully detect a simulated attack from a predefined malicious IP address using Zeek's Intel Framework.
 
-This lab showcases core SOC skills: defensive security hardening, proactive monitoring, log analysis, and incident detection.
 
----
 
 ## Table of Contents
 
@@ -47,7 +46,7 @@ In modern cybersecurity, defense is multi-layered. This project emulates a real-
 - **Deployed a Network Security Monitoring (NSM) tool** (Zeek) to gain deep visibility into network traffic.
 - **Leveraged threat intelligence** by feeding Zeek a list of known malicious IPs, enabling it to automatically flag and log interaction attempts.
 
-This end to end process is critical for protecting assets and detecting intrusions in a SOC environment.
+This end to end process is critical for protecting assets and detecting intrusion.
 
 ---
 
@@ -156,7 +155,7 @@ The final test: accessing the site now redirects to the custom login page, and o
 ## Phase 2: Zeek Network Monitoring & Threat Detection
 
 ### What is Zeek?
-Zeek is an open-source Network Security Monitoring (NSM) tool. Unlike traditional IDS that relies on signatures, Zeek interprets network traffic and generates rich, structured logs of the activity it sees. This allows SOC analysts to hunt for threats based on behavior and patterns, making it invaluable for detecting both known and unknown attacks.
+Zeek is an open-source Network Security Monitoring (NSM) tool. Unlike traditional IDS that relies on signatures, Zeek interprets network traffic and generates rich, structured logs of the activity it sees. This allows the hunt for threats based on behavior and patterns, making it valuable for detecting both known and unknown attacks.
 
 ### Steps 15-18: Install Zeek from Source
 To get the latest features, Zeek was compiled from source. This involved installing all dependencies, cloning the repository, configuring the build, and compiling the software.
@@ -259,9 +258,9 @@ cat intel.log
 ![Threat Detection Log](./image/image%2028.jpg)
 
 ![Threat Detection Log](./image/image%2029.jpg)
-> **Caption:** *The moment of truth! The `intel.log` file shows a successful detection. Zeek has flagged the connection from our simulated attacker IP (`192.168.0.30`), noting it as a known malicious indicator. This is exactly how a SOC would detect a real-world intrusion attempt from a known bad actor.*
+> **Caption:** *The moment of truth! The `intel.log` file shows a successful detection. Zeek has flagged the connection from our simulated attacker IP (`192.168.0.30`), noting it as a known malicious indicator. 
 
----
+
 
 ## Conclusion
 
@@ -270,8 +269,6 @@ This project successfully simulated a robust defensive security posture:
 - **Server Hardening:** The Apache server was secured with a custom authentication mechanism, moving beyond the default setup.
 - **Network Visibility:** Zeek was deployed, providing deep, actionable logs of all network traffic.
 -  Proactive Threat Detection: By leveraging Zeek's Intel Framework, the system automatically detected and alerted on a connection from a known malicious IP.
-
-This end-to-end process is a fundamental demonstration of core SOC analyst responsibilities: building secure systems, monitoring for anomalies, and using threat intelligence to proactively identify and respond to threats. The skills practiced here—system administration, log analysis, and tool configuration—are directly transferable to a professional security operations center.
 
 ---
 *This lab was conducted in a controlled environment. All IP addresses are from private lab networks.*
